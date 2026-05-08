@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethics & Political Philosophy — IB HL Philosophy Study Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0c0f14;
+      --bg2: #111520;
+      --bg3: #161c28;
+      --surface: #1a2133;
+      --surface2: #1f2840;
+      --border: #263047;
+      --border2: #2e3a55;
+      --text: #d4dbe8;
+      --text-muted: #7a8aaa;
+      --text-dim: #4a5a78;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --ethics: #5b8fff;
+      --ethics-dim: #3366cc;
+      --polphil: #7c5cbf;
+      --polphil-dim: #5a3d99;
+      --meta: #3db89c;
+      --meta-dim: #2a8a74;
+      --applied: #e05c5c;
+      --applied-dim: #b83b3b;
+      --virtue: #d4845a;
+      --virtue-dim: #a85a32;
+      --deonto: #5ba8d4;
+      --deonto-dim: #3a82aa;
+      --util: #7ec47e;
+      --util-dim: #4a9c4a;
+      --state: #d4a05a;
+      --liberty: #e08cad;
+      --distrib: #8fb8e0;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.7;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 260px;
+      min-width: 260px;
+      background: var(--bg2);
+      border-right: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 24px 0;
+      flex-shrink: 0;
+    }
+
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-track { background: transparent; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+    .sidebar-logo {
+      padding: 0 20px 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    .sidebar-logo .brand {
+      font-family: var(--font-serif);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .sidebar-logo .title {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-top: 4px;
+    }
+
+    .nav-section {
+      padding: 0 8px;
+      margin-bottom: 8px;
+    }
+
+    .nav-section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding: 8px 12px 4px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 400;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .nav-item:hover {
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .nav-item .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .nav-item.ethics-color .dot { background: var(--ethics); }
+    .nav-item.polphil-color .dot { background: var(--polphil); }
+    .nav-item.sub { padding-left: 28px; font-size: 12px; }
+    .nav-item.sub .dot { width: 4px; height: 4px; }
+
+    /* ── Main ── */
+    .main {
+      flex: 1;
+      max-width: 900px;
+      padding: 60px 56px 120px;
+      margin: 0 auto;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      margin-bottom: 72px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 700;
+      color: #e8eef8;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 28px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .stat-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    /* ── Theme header ── */
+    .theme-header {
+      margin: 64px 0 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .theme-accent {
+      width: 4px;
+      border-radius: 2px;
+      align-self: stretch;
+      min-height: 60px;
+    }
+
+    .theme-accent.ethics { background: var(--ethics); }
+    .theme-accent.polphil { background: var(--polphil); }
+
+    .theme-header-content {}
+
+    .theme-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .theme-tag.ethics { background: rgba(91,143,255,0.12); color: var(--ethics); border: 1px solid rgba(91,143,255,0.25); }
+    .theme-tag.polphil { background: rgba(124,92,191,0.12); color: var(--polphil); border: 1px solid rgba(124,92,191,0.25); }
+
+    .theme-header h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e8eef8;
+      line-height: 1.2;
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 56px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .section-label.ethics { color: var(--ethics); }
+    .section-label.polphil { color: var(--polphil); }
+    .section-label.meta { color: var(--meta); }
+    .section-label.applied { color: var(--applied); }
+    .section-label.virtue { color: var(--virtue); }
+    .section-label.deonto { color: var(--deonto); }
+    .section-label.util { color: var(--util); }
+    .section-label.state { color: var(--state); }
+    .section-label.liberty { color: var(--liberty); }
+    .section-label.distrib { color: var(--distrib); }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #d4dbe8;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* ── Thinker cards ── */
+    .thinker-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .thinker-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+    }
+
+    .thinker-card.ethics::before { background: var(--ethics); }
+    .thinker-card.polphil::before { background: var(--polphil); }
+    .thinker-card.meta::before { background: var(--meta); }
+    .thinker-card.applied::before { background: var(--applied); }
+    .thinker-card.virtue::before { background: var(--virtue); }
+    .thinker-card.deonto::before { background: var(--deonto); }
+    .thinker-card.util::before { background: var(--util); }
+    .thinker-card.state::before { background: var(--state); }
+    .thinker-card.liberty::before { background: var(--liberty); }
+    .thinker-card.distrib::before { background: var(--distrib); }
+
+    .thinker-meta {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .thinker-name {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #e4ecf8;
+    }
+
+    .thinker-dates {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+    }
+
+    .thinker-school {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: auto;
+    }
+
+    .school-meta { background: rgba(61,184,156,0.1); color: var(--meta); border: 1px solid rgba(61,184,156,0.2); }
+    .school-deonto { background: rgba(91,168,212,0.1); color: var(--deonto); border: 1px solid rgba(91,168,212,0.2); }
+    .school-util { background: rgba(126,196,126,0.1); color: var(--util); border: 1px solid rgba(126,196,126,0.2); }
+    .school-virtue { background: rgba(212,132,90,0.1); color: var(--virtue); border: 1px solid rgba(212,132,90,0.2); }
+    .school-natural { background: rgba(201,168,76,0.1); color: var(--gold); border: 1px solid rgba(201,168,76,0.2); }
+    .school-liberal { background: rgba(224,140,173,0.1); color: var(--liberty); border: 1px solid rgba(224,140,173,0.2); }
+    .school-social { background: rgba(143,184,224,0.1); color: var(--distrib); border: 1px solid rgba(143,184,224,0.2); }
+    .school-contract { background: rgba(208,160,90,0.1); color: var(--state); border: 1px solid rgba(208,160,90,0.2); }
+    .school-libertarian { background: rgba(124,92,191,0.1); color: var(--polphil); border: 1px solid rgba(124,92,191,0.2); }
+
+    .thinker-card p {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    .thinker-card p:last-child { margin-bottom: 0; }
+
+    .thinker-card h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 14px 0 6px;
+    }
+
+    .thinker-card strong { color: var(--text); font-weight: 600; }
+
+    /* ── Concept box ── */
+    .concept-box {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 16px;
+    }
+
+    .concept-box .concept-term {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .concept-box p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ── Info grid ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) { .info-grid { grid-template-columns: 1fr; } }
+
+    .info-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+
+    .info-card .info-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .info-card.ethics .info-label { color: var(--ethics); }
+    .info-card.polphil .info-label { color: var(--polphil); }
+    .info-card.meta .info-label { color: var(--meta); }
+    .info-card.virtue .info-label { color: var(--virtue); }
+    .info-card.util .info-label { color: var(--util); }
+    .info-card.deonto .info-label { color: var(--deonto); }
+    .info-card.state .info-label { color: var(--state); }
+    .info-card.liberty .info-label { color: var(--liberty); }
+    .info-card.distrib .info-label { color: var(--distrib); }
+
+    .info-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.65; }
+
+    /* ── Principle list ── */
+    .principle-list {
+      list-style: none;
+      margin: 12px 0 20px;
+    }
+
+    .principle-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .principle-list li:last-child { border-bottom: none; }
+
+    .principle-list li .num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold);
+      background: rgba(201,168,76,0.08);
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .principle-list li strong { color: var(--text); }
+
+    /* ── Callout ── */
+    .callout {
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .callout.synoptic {
+      background: rgba(201,168,76,0.06);
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--text-muted);
+    }
+
+    .callout.synoptic::before {
+      content: '⟳ Synoptic Link';
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .callout.objection {
+      background: rgba(224,92,92,0.06);
+      border: 1px solid rgba(224,92,92,0.2);
+      color: var(--text-muted);
+    }
+
+    .callout.objection::before {
+      content: '⚡ Objection';
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--applied);
+      margin-bottom: 6px;
+    }
+
+    .callout.exam-tip {
+      background: rgba(91,143,255,0.06);
+      border: 1px solid rgba(91,143,255,0.2);
+      color: var(--text-muted);
+    }
+
+    .callout.exam-tip::before {
+      content: '✦ Exam Technique';
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ethics);
+      margin-bottom: 6px;
+    }
+
+    /* ── Quote ── */
+    .phil-quote {
+      border-left: 3px solid var(--gold);
+      padding: 12px 20px;
+      margin: 20px 0;
+      background: rgba(201,168,76,0.04);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .phil-quote p {
+      font-family: var(--font-serif);
+      font-size: 14.5px;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    .phil-quote .attribution {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-style: normal;
+      font-family: var(--font-sans);
+    }
+
+    /* ── Comparison table ── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin: 20px 0;
+    }
+
+    .compare-table th {
+      text-align: left;
+      padding: 10px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .compare-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td strong { color: var(--text); }
+
+    /* ── Term glossary ── */
+    .glossary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 640px) { .glossary { grid-template-columns: 1fr; } }
+
+    .glossary-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 16px;
+    }
+
+    .glossary-item dt {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+    }
+
+    .glossary-item dd {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── Debate card ── */
+    .debate-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 600px) { .debate-grid { grid-template-columns: 1fr; } }
+
+    .debate-side {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+
+    .debate-side .side-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .debate-side.for .side-label { color: var(--util); }
+    .debate-side.against .side-label { color: var(--applied); }
+
+    .debate-side ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .debate-side li {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .debate-side.for li::before { content: '+'; position: absolute; left: 0; color: var(--util); font-weight: 700; }
+    .debate-side.against li::before { content: '−'; position: absolute; left: 0; color: var(--applied); font-weight: 700; }
+
+    /* ── Chapter divider ── */
+    .chapter-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 60px 0 40px;
+    }
+
+    .chapter-divider .chapter-num {
+      font-family: var(--font-serif);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    .chapter-divider .chapter-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Subsection ── */
+    .subsection {
+      margin-bottom: 36px;
+    }
+
+    .subsection h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #d0d8e8;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .subsection h3 .anchor-hash {
+      color: var(--text-dim);
+      font-size: 14px;
+      font-family: var(--font-mono);
+      font-weight: 400;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    .subsection h3:hover .anchor-hash { opacity: 1; }
+
+    .subsection p {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    /* ── Formulation card ── */
+    .formulation {
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 12px 0;
+    }
+
+    .formulation .f-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--deonto);
+      margin-bottom: 8px;
+    }
+
+    .formulation .f-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 6px;
+    }
+
+    .formulation p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ── Steps / process ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Tag pills ── */
+    .tag-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 12px 0;
+    }
+
+    .tag {
+      font-size: 11.5px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-weight: 500;
+      background: var(--surface);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main { padding: 40px 24px 80px; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="brand">IB HL Philosophy · Paper 1</div>
+    <div class="title">Optional Themes</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Optional Theme 1</div>
+    <a href="#ethics" class="nav-item ethics-color"><span class="dot"></span>Ethics Overview</a>
+    <a href="#meta-ethics" class="nav-item sub ethics-color"><span class="dot"></span>Meta-Ethics</a>
+    <a href="#cognitivism" class="nav-item sub ethics-color"><span class="dot"></span>Cognitivism &amp; Realism</a>
+    <a href="#non-cognitivism" class="nav-item sub ethics-color"><span class="dot"></span>Non-Cognitivism</a>
+    <a href="#normative-ethics" class="nav-item sub ethics-color"><span class="dot"></span>Normative Ethics</a>
+    <a href="#virtue-ethics" class="nav-item sub ethics-color"><span class="dot"></span>Virtue Ethics</a>
+    <a href="#natural-law" class="nav-item sub ethics-color"><span class="dot"></span>Natural Law</a>
+    <a href="#deontology" class="nav-item sub ethics-color"><span class="dot"></span>Deontology / Kant</a>
+    <a href="#consequentialism" class="nav-item sub ethics-color"><span class="dot"></span>Consequentialism</a>
+    <a href="#applied-ethics" class="nav-item sub ethics-color"><span class="dot"></span>Applied Ethics</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Optional Theme 2</div>
+    <a href="#polphil" class="nav-item polphil-color"><span class="dot"></span>Political Philosophy</a>
+    <a href="#state-of-nature" class="nav-item sub polphil-color"><span class="dot"></span>State of Nature</a>
+    <a href="#justifying-state" class="nav-item sub polphil-color"><span class="dot"></span>Justifying the State</a>
+    <a href="#who-should-rule" class="nav-item sub polphil-color"><span class="dot"></span>Who Should Rule?</a>
+    <a href="#liberty" class="nav-item sub polphil-color"><span class="dot"></span>Place of Liberty</a>
+    <a href="#distributive-justice" class="nav-item sub polphil-color"><span class="dot"></span>Distributive Justice</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">IB HL Philosophy · Paper 1 Section A · Optional Themes</div>
+    <h1>Ethics &amp; Political Philosophy</h1>
+    <p>A comprehensive study guide covering both optional themes — meta-ethics, normative ethics, applied ethics, and the full range of political philosophy from the state of nature to distributive justice.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-icon">⚖️</div>Optional Theme 1: Ethics</div>
+      <div class="stat"><div class="stat-icon">🏛</div>Optional Theme 2: Political Philosophy</div>
+      <div class="stat"><div class="stat-icon">✦</div>All Key Thinkers</div>
+      <div class="stat"><div class="stat-icon">📋</div>Exam-Ready Analysis</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- OPTIONAL THEME 1: ETHICS                          -->
+  <!-- ══════════════════════════════════════════════════ -->
+
+  <div id="ethics" class="theme-header">
+    <div class="theme-accent ethics"></div>
+    <div class="theme-header-content">
+      <div class="theme-tag ethics">Optional Theme 1</div>
+      <h2>Ethics</h2>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-intro">Ethics is the philosophical discipline concerned with questions of morality — what is right and wrong, good and bad, how we ought to act, and what grounds moral judgments. The IB syllabus divides ethics into three interlocking areas: <strong>meta-ethics</strong> (the nature of moral language and moral properties), <strong>normative ethics</strong> (theories of right action), and <strong>applied ethics</strong> (the application of moral principles to specific controversies).</p>
+
+    <div class="info-grid">
+      <div class="info-card meta">
+        <div class="info-label">Meta-Ethics</div>
+        <p>Examines the nature, status, and origins of moral claims. Are moral statements true or false? Do moral properties exist independently of us?</p>
+      </div>
+      <div class="info-card virtue">
+        <div class="info-label">Normative Ethics</div>
+        <p>Formulates theories about how we ought to act. Includes virtue ethics, natural law, deontology, and consequentialism.</p>
+      </div>
+      <div class="info-card deonto">
+        <div class="info-label">Deontological</div>
+        <p>Morality derives from duties and obligations — the inherent rightness or wrongness of actions, regardless of consequences.</p>
+      </div>
+      <div class="info-card util">
+        <div class="info-label">Teleological</div>
+        <p>Morality derives from the goodness of consequences — the rightness of an act depends on the value of its outcomes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- META-ETHICS -->
+  <div class="chapter-divider">
+    <div class="chapter-num">Section I</div>
+    <div class="chapter-line"></div>
+  </div>
+
+  <div id="meta-ethics" class="section">
+    <div class="section-label meta">Meta-Ethics</div>
+    <div class="section-title">The Nature of Moral Language &amp; Properties</div>
+    <p class="section-intro">Meta-ethics does not tell us what is right or wrong — it asks what moral claims even <em>mean</em>, whether moral properties exist in the world, and how moral knowledge (if any) is possible. Think of the meta-ethicist as a football commentator: not playing the game, but analysing how it is played.</p>
+
+    <div class="subsection">
+      <h3 id="cognitivism">Moral Cognitivism &amp; Realism <span class="anchor-hash">#</span></h3>
+      <p>Cognitivists hold that moral statements are genuine truth-apt claims — they can be true or false. They are connected to cognition: morality exists in an objective world, and moral rightness or wrongness is in principle <em>knowable</em>.</p>
+
+      <div class="thinker-card meta">
+        <div class="thinker-meta">
+          <div class="thinker-name">Moral Realism</div>
+          <span class="thinker-school school-meta">Cognitivist &amp; Realist</span>
+        </div>
+        <p>Moral realists hold that moral properties exist <strong>independently of human minds</strong> and can be located in the world. Just as an action can be described as violent, it can also be described as morally wrong — and that moral wrongness is a real feature of the action, not merely a projection of our feelings.</p>
+        <p>Compare to geography: a geographer holds that water in Lake Ontario has properties (temperature, depth) that exist independently of human belief. Moral realists make an analogous claim about moral properties. Crucially, realism implies the <strong>possibility of moral error</strong> — believing murder is wrong does not make it wrong; what makes it wrong is the presence of an actual, objective moral property.</p>
+      </div>
+
+      <div class="thinker-card meta">
+        <div class="thinker-meta">
+          <div class="thinker-name">Moral Naturalism</div>
+          <span class="thinker-school school-meta">Cognitivist &amp; Realist</span>
+        </div>
+        <p>Naturalists hold that moral properties are natural in the same way as properties discussed in science — they are empirically observable. They want to fit morality into the non-mystical world of ordinary science rather than positing Platonic Forms.</p>
+        <p><strong>Utilitarianism</strong> is underpinned by naturalism — utilitarians view "good" as an entirely natural property explainable through neural firings or psychological states. <strong>Virtue ethics</strong> is also naturalist: what makes something virtuous is entirely determined by natural factors about psychology, biology, and social dynamics.</p>
+      </div>
+
+      <div class="thinker-card meta">
+        <div class="thinker-meta">
+          <div class="thinker-name">G. E. Moore</div>
+          <div class="thinker-dates">1873–1958</div>
+          <span class="thinker-school school-meta">Non-Naturalism</span>
+        </div>
+        <p><strong>Moral Non-Naturalism:</strong> Moore argued that moral properties are <em>not</em> natural properties. "Good" is a simple, indefinable concept like the colour yellow — we cannot break it down into simpler components. Compare a horse (complex concept, analysable) with yellow (simple, cannot be defined without circularity).</p>
+        <div class="phil-quote">
+          <p>"If I am asked 'What is good?' my answer is that good is good, and that is the end of the matter."</p>
+          <span class="attribution">— G. E. Moore, <em>The Open Question Argument</em></span>
+        </div>
+        <p><strong>The Naturalistic Fallacy &amp; Open Question Argument:</strong> Moore argued that any attempt to define "good" in natural terms commits the Naturalistic Fallacy. His test: if the question "Is this [natural property] actually good?" is still an open (meaningful) question, then the two concepts cannot be synonymous. "Is pleasure good?" is an open question — so good cannot simply <em>mean</em> pleasure.</p>
+        <p><strong>Intuitionism:</strong> Since we cannot empirically discover moral properties, many non-naturalists (including Moore) hold we intuit them through a moral sense. When we correctly refer to the presence of a non-natural moral property, we make a true moral statement.</p>
+      </div>
+
+      <div class="callout objection">
+        Three objections to intuitionism: (1) Why do people disagree so radically on moral questions? (2) How can we verify the correctness of intuitions, especially when they conflict? (3) Our "intuitions" are likely just irrational moral feelings based on upbringing and culture, not genuine apprehensions of objective goodness.
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3 id="error-theory">Moral Error Theory <span class="anchor-hash">#</span></h3>
+
+      <div class="thinker-card meta">
+        <div class="thinker-meta">
+          <div class="thinker-name">J. L. Mackie</div>
+          <div class="thinker-dates">1917–1981</div>
+          <span class="thinker-school school-meta">Cognitivist &amp; Anti-Realist</span>
+        </div>
+        <p>Mackie agrees that our moral utterances express truth-apt beliefs (so far: cognitivist). But he denies these beliefs are ever <em>true</em> — because we live in a world without objective moral properties (hence: anti-realist). All positive moral claims are therefore systematically false — an "error."</p>
+        <h4>Mackie's Two Arguments:</h4>
+        <ul class="principle-list">
+          <li><span class="num">1</span><span>We have been having the same moral debates for millennia without resolution. If objective moral truths existed, we would presumably have converged on them by now.</span></li>
+          <li><span class="num">2</span><span>Moral properties, if they existed, would have to be inherently action-guiding — giving us reasons to act on morality even when we don't feel like it. But it is very strange to think a feature of the world could be "objectively prescriptive" in this way.</span></li>
+        </ul>
+        <div class="callout objection">
+          Objections to Mackie: (1) We disagree because of non-moral factual disagreements, not because moral truths don't exist (Ayer). (2) We <em>have</em> made moral progress — slavery, racism, and sexism are now widely condemned. (3) Error theory is deeply counterintuitive: it implies no action is genuinely wrong.
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection" id="non-cognitivism">
+      <h3>Non-Cognitivism <span class="anchor-hash">#</span></h3>
+      <p>Non-cognitivists hold that moral utterances are not truth-apt — they do not state facts but instead express attitudes, prescriptions, or emotions. Morality is therefore subjective.</p>
+
+      <div class="thinker-card applied">
+        <div class="thinker-meta">
+          <div class="thinker-name">Emotivism</div>
+          <span class="thinker-school school-meta">Non-Cognitivist &amp; Anti-Realist</span>
+        </div>
+        <p><strong>A. J. Ayer &amp; C. L. Stevenson:</strong> When I say "murder is wrong," I am not stating a fact — I am expressing a negative emotional attitude, a linguistic "boo." When I say "giving to charity is good," I express a "hurrah." This is the <strong>boo/hurrah theory</strong>.</p>
+        <p>Emotivism captures the connection between morality and motivation: moral utterances directly express motivationally relevant emotions. Because they are not truth-apt (you cannot say a "boo" is false), moral statements are neither true nor false.</p>
+        <p>Stevenson added that moral terms like "right," "wrong," "good," and "bad" have only emotive meanings — expressions of approval or disapproval — and no descriptive content.</p>
+        <div class="callout objection">
+          (1) Psychologically, when I say "terrorism is wrong" I believe this to be true — not merely that I dislike terrorism. (2) Some moral utterances are detached from the speaker's emotions ("It is wrong to avoid taxes"). (3) Moral disagreement appeals to evidence and logic independent of the speaker's feelings.
+        </div>
+      </div>
+
+      <div class="thinker-card applied">
+        <div class="thinker-meta">
+          <div class="thinker-name">R. M. Hare</div>
+          <div class="thinker-dates">1919–2002</div>
+          <span class="thinker-school school-meta">Prescriptivism</span>
+        </div>
+        <p>Hare found emotivism too simplistic. On his view, moral utterances express a <strong>subjective prescription for others to act</strong> in accordance with our moral judgments. "Euthanasia is wrong" means "I want others to cease supporting euthanasia." Prescriptivism captures the action-guiding nature of moral language without asserting moral truth.</p>
+        <p>The prescriptivist can be criticized for <em>inconsistency</em> (contradicting themselves) but not for uttering falsehoods. There is no moral knowledge or moral error — only consistency or inconsistency of prescriptions.</p>
+        <div class="callout objection">
+          Prescriptivism cannot say that a morally consistent racist is <em>wrong</em> — it can only say they are consistent. This is deeply counterintuitive and seems to deprive ethics of any critical bite.
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>Hume's Is-Ought Problem <span class="anchor-hash">#</span></h3>
+      <p>Hume observed that philosophers begin with factual (descriptive) claims about the world and then suddenly shift to normative (prescriptive) claims about what <em>ought</em> to be done — without justifying the transition. This gap between "is" and "ought" is a fundamental challenge for all moral theories.</p>
+      <p>Hume also argued that <strong>belief alone does not motivate behavior</strong> — belief must be coupled with <em>desire</em> to motivate action. This supports non-cognitivism: if moral statements were purely cognitive (belief-like), they could not explain moral motivation.</p>
+
+      <div class="callout synoptic">
+        The is-ought gap bears on all normative theories: naturalists (who derive "ought" from natural facts) must explain how they cross it; non-cognitivists sidestep it by denying that moral statements express beliefs at all.
+      </div>
+    </div>
+  </div>
+
+  <!-- NORMATIVE ETHICS -->
+  <div class="chapter-divider">
+    <div class="chapter-num">Section II</div>
+    <div class="chapter-line"></div>
+  </div>
+
+  <div id="normative-ethics" class="section">
+    <div class="section-label virtue">Normative Ethics</div>
+    <div class="section-title">How Should We Act?</div>
+    <p class="section-intro">Normative ethics formulates moral rules with direct implications for how human beings, institutions, and ways of life should be. Its central question: <em>How are basic moral standards arrived at and justified?</em> The answers divide broadly into deontological (duty-based) and teleological (consequence-based) approaches.</p>
+  </div>
+
+  <!-- VIRTUE ETHICS -->
+  <div id="virtue-ethics" class="section">
+    <div class="section-label virtue">Virtue Ethics</div>
+    <div class="section-title">Aristotle &amp; Aquinas</div>
+
+    <div class="thinker-card virtue">
+      <div class="thinker-meta">
+        <div class="thinker-name">Aristotle</div>
+        <div class="thinker-dates">384–322 BCE</div>
+        <span class="thinker-school school-virtue">Virtue Ethics</span>
+      </div>
+      <p><strong>Eudaimonia (Flourishing):</strong> In the <em>Nicomachean Ethics</em>, Aristotle argues that the goal of all human action is <em>eudaimonia</em> — not merely pleasure (a fleeting feeling) but genuine human flourishing, the state of having fulfilled one's potential and lived well. Eudaimonia is a <strong>final end</strong>: we pursue it for its own sake, not as a means to anything further.</p>
+
+      <h4>Instrumental Ends vs. Final Ends</h4>
+      <p><strong>Instrumental ends</strong> are goals we pursue in order to achieve something else (e.g., earning money to afford food). <strong>Final ends</strong> are goals pursued entirely for their own sake. Aristotle argues eudaimonia is the ultimate final end — the question "Why do you want to flourish?" cannot be meaningfully asked.</p>
+
+      <h4>The Function Argument</h4>
+      <p>Every thing has a function (ergon). The function of a knife is to cut; of an eye, to see. The function of a human being — what distinguishes us from plants and animals — is the <strong>exercise of the rational soul in accordance with virtue</strong>. Human flourishing therefore consists in doing this well.</p>
+
+      <h4>The Habituation Argument</h4>
+      <p>Virtues are <em>not</em> natural properties (which cannot be changed) but <em>habitual</em> properties — acquired by practice. We become courageous by doing courageous acts; just by doing just acts. Virtues are therefore teachable and learnable. The same is true of vices.</p>
+
+      <h4>Doctrine of the Golden Mean</h4>
+      <p>Each virtue is the mean between two corresponding vices — a deficiency and an excess. <strong>Courage</strong> is the mean between cowardice (deficiency) and recklessness (excess). <strong>Generosity</strong> is the mean between miserliness and prodigality. <em>Phronesis</em> (practical wisdom) — a kind of moral street-wisdom — guides the virtuous person in identifying the mean in particular circumstances.</p>
+      <p><strong>Moral particularism:</strong> There are no general moral formulas that will always tell you what the virtuous act is. Learning to live well is more like learning to diagnose disease than to solve equations. Look for <em>moral exemplars</em> — people who embody virtue — and emulate them.</p>
+      <div class="callout exam-tip">
+        When answering questions about virtue ethics, always distinguish <em>eudaimonia</em> from mere pleasure. Aristotle rejects hedonism — flourishing is not a feeling but a state of being that results from a life lived virtuously.
+      </div>
+    </div>
+
+    <div id="natural-law" class="thinker-card virtue">
+      <div class="thinker-meta">
+        <div class="thinker-name">Thomas Aquinas</div>
+        <div class="thinker-dates">1225–1274</div>
+        <span class="thinker-school school-natural">Natural Law</span>
+      </div>
+      <p>Aquinas Christianised Aristotle's concept of <em>telos</em> — everything has a purpose built into its nature. For Aristotle, the ultimate purpose of humans was eudaimonia; for Aquinas, it is <strong>godliness</strong>, which involves following God's moral law and results in eudaimonia for individuals and society.</p>
+
+      <h4>Four Tiers of Law</h4>
+      <ul class="principle-list">
+        <li><span class="num">1</span><span><strong>Eternal Law:</strong> God's plan built into the nature of all things — beyond human understanding.</span></li>
+        <li><span class="num">2</span><span><strong>Divine Law:</strong> God's direct revelation to humans, found in scripture.</span></li>
+        <li><span class="num">3</span><span><strong>Natural Law:</strong> The moral law God inscribed in human nature, discoverable by human reason.</span></li>
+        <li><span class="num">4</span><span><strong>Human Law:</strong> The laws humans make, which should be grounded in natural and divine law.</span></li>
+      </ul>
+
+      <h4>Primary Precepts (via Synderesis)</h4>
+      <p><em>Synderesis</em> is reason's foundational habit of discovering the first principles of natural moral law. The synderesis rule: <em>the good is what all things seek as their end</em>. The five primary precepts are: worship God; live in an orderly society; reproduce; protect and preserve human life; defend the innocent.</p>
+
+      <h4>Secondary Precepts &amp; Conscientia</h4>
+      <p><em>Conscientia</em> is the ability of reason to apply primary precepts to specific situations, yielding secondary precepts. Example: the primary precept of preserving human life yields the secondary precept that euthanasia is wrong, even though euthanasia is not mentioned explicitly in the primary precepts.</p>
+
+      <h4>Interior &amp; Exterior Acts</h4>
+      <p>Interior acts occur inside the mind (intentions); exterior acts occur in the world. A morally good exterior act without a good interior act (right intention) does not lead to genuine fulfillment. One must act in accordance with one's God-given <em>telos</em> in both intention and deed.</p>
+      <div class="callout synoptic">
+        Natural Law connects virtue ethics (telos, habituation) to deontology (duty to follow moral law) and to meta-ethics (moral naturalism — moral properties are built into nature itself). Always show these connections in essays.
+      </div>
+    </div>
+  </div>
+
+  <!-- DEONTOLOGY -->
+  <div id="deontology" class="section">
+    <div class="section-label deonto">Deontology</div>
+    <div class="section-title">Kant &amp; the Categorical Imperative</div>
+    <p class="section-intro">Deontological theories hold that some actions are inherently right or wrong — regardless of their consequences. The word derives from the Greek <em>deon</em> (duty). Morality is about obligation, not outcomes.</p>
+
+    <div class="thinker-card deonto">
+      <div class="thinker-meta">
+        <div class="thinker-name">Immanuel Kant</div>
+        <div class="thinker-dates">1724–1804</div>
+        <span class="thinker-school school-deonto">Kantian Ethics</span>
+      </div>
+      <p>Kant's <em>Groundwork of the Metaphysics of Morals</em> (1785) argues that the only thing good in itself, without qualification, is a <strong>good will</strong> — a will that acts from duty for duty's sake, not from inclination or desired outcomes. The <strong>Categorical Imperative</strong> is the supreme principle of morality: a moral command that applies to all rational beings unconditionally.</p>
+
+      <div class="formulation">
+        <div class="f-label">First Formulation — Universal Law</div>
+        <div class="f-quote">"Act only according to that maxim whereby you can at the same time will that it should become a universal law."</div>
+        <p>Test: can your maxim (principle of action) be consistently universalised? If universalising it produces contradiction, the action is impermissible. E.g., "I will make false promises when convenient" — if everyone did this, the institution of promising would collapse, making the maxim self-defeating.</p>
+      </div>
+
+      <div class="formulation">
+        <div class="f-label">Second Formulation — Humanity</div>
+        <div class="f-quote">"Act in such a way that you treat humanity, whether in your own person or in the person of another, always at the same time as an end, and never simply as a means."</div>
+        <p>Rational persons have intrinsic dignity and must never be used merely as instruments for another's goals. This grounds the absolute prohibition on deception, manipulation, and exploitation.</p>
+      </div>
+
+      <div class="formulation">
+        <div class="f-label">Third Formulation — Autonomy</div>
+        <div class="f-quote">"...the idea of the will of every rational being as a will that legislates universal law."</div>
+        <p>Rather than testing whether you <em>follow</em> universal laws, conceive of yourself as a <em>legislator</em>. Your will, in choosing a maxim, is effectively legislating a law for all rational beings.</p>
+      </div>
+
+      <div class="formulation">
+        <div class="f-label">Fourth Formulation — Kingdom of Ends</div>
+        <div class="f-quote">"Act in accordance with the maxims of a member legislating universal laws for a merely possible kingdom of ends."</div>
+        <p>Act only on principles that could be accepted by a community of rational agents, each an equal legislator. This "kingdom of ends" is an ideal moral community in which each person treats every other as an end in themselves.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card deonto">
+          <div class="info-label">Strength</div>
+          <p>Provides absolute, universal moral rules that do not bend to consequences. Respects the dignity of persons by forbidding exploitation regardless of outcomes.</p>
+        </div>
+        <div class="info-card util">
+          <div class="info-label">Objection</div>
+          <p>Kant's formulas can produce highly counterintuitive results — e.g., the duty to tell the truth even to a murderer asking where your friend is hiding.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONSEQUENTIALISM -->
+  <div id="consequentialism" class="section">
+    <div class="section-label util">Consequentialism</div>
+    <div class="section-title">Utilitarianism &amp; Related Theories</div>
+    <p class="section-intro">Consequentialist theories hold that the moral value of an act is entirely a function of its consequences. The right act is the one that produces the best overall outcome. The dominant form is <strong>utilitarianism</strong>.</p>
+
+    <div class="thinker-card util">
+      <div class="thinker-meta">
+        <div class="thinker-name">Jeremy Bentham</div>
+        <div class="thinker-dates">1748–1832</div>
+        <span class="thinker-school school-util">Act Utilitarianism</span>
+      </div>
+      <p>Bentham's <strong>Greatest Happiness Principle (GHP)</strong>: the morally right action is the one that produces the most happiness and the least pain. Utilitarianism rests on three sub-principles:</p>
+      <ul class="principle-list">
+        <li><span class="num">①</span><span><strong>The Consequentialist Principle:</strong> Judge an action's moral worth by its consequences alone.</span></li>
+        <li><span class="num">②</span><span><strong>The Hedonic Principle:</strong> The only relevant consequence is the amount of happiness or pleasure produced.</span></li>
+        <li><span class="num">③</span><span><strong>The Equity Principle:</strong> Everyone's happiness counts equally — utilitarian altruism, not egoism.</span></li>
+      </ul>
+      <p><strong>Bentham's Hedonic Calculus</strong> quantifies pleasures along seven dimensions: Intensity, Duration, Certainty, Propinquity (immediacy), Fecundity (likelihood of further pleasures), Purity (likelihood of subsequent pain), and Extent (number of people affected). Mnemonic: <em>I Don't Cook Pineapples For Picky Eaters.</em></p>
+      <p><strong>Act Utilitarianism:</strong> Assess the GHP case-by-case. Individual rights or justice may be overridden if the calculus demands it. This grants moral flexibility but risks sacrificing minorities for majorities.</p>
+    </div>
+
+    <div class="thinker-card util">
+      <div class="thinker-meta">
+        <div class="thinker-name">John Stuart Mill</div>
+        <div class="thinker-dates">1806–1873</div>
+        <span class="thinker-school school-util">Rule Utilitarianism</span>
+      </div>
+      <p><strong>Rule Utilitarianism:</strong> Rather than applying the GHP to each individual act, Mill argues we should formulate <em>rules</em> whose general observance tends to maximise happiness. Following rules produces more reliable long-term outcomes than act-by-act calculation.</p>
+      <p>Mill also distinguishes qualities of pleasure — <strong>higher pleasures</strong> (intellectual, aesthetic) are superior to lower pleasures (purely physical). "It is better to be Socrates dissatisfied than a fool satisfied." This qualitative distinction moves utilitarianism beyond Bentham's simple calculus.</p>
+
+      <div class="debate-grid">
+        <div class="debate-side for">
+          <div class="side-label">Strengths of GHP</div>
+          <ul>
+            <li>Highly intuitive — assessing consequences is natural</li>
+            <li>Intrinsically motivating — seeking happiness is a fundamental drive</li>
+            <li>Egalitarian — treats everyone's happiness as equally valuable</li>
+            <li>Practical — provides a concrete decision procedure</li>
+          </ul>
+        </div>
+        <div class="debate-side against">
+          <div class="side-label">Criticisms of GHP</div>
+          <ul>
+            <li>Unpredictability — consequences cannot be accurately forecast</li>
+            <li>Vague scope — short-term or long-term? Local or global?</li>
+            <li>Moral conflict — can justify sacrificing the few for the many</li>
+            <li>Scapegoat objection — could justify punishing an innocent person</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>Other Consequentialist Theories <span class="anchor-hash">#</span></h3>
+      <div class="info-grid">
+        <div class="info-card util">
+          <div class="info-label">Hedonism</div>
+          <p>The pursuit of individual pleasure is the highest moral priority. Differs from utilitarianism by focusing on <em>personal</em> pleasure rather than collective good.</p>
+        </div>
+        <div class="info-card ethics">
+          <div class="info-label">Ethical Egoism</div>
+          <p>Individuals should act in their own self-interest. Associated with Hobbes' contractarianism — morality emerges from a self-interested bargain among rational agents.</p>
+        </div>
+        <div class="info-card meta">
+          <div class="info-label">Ethical Altruism</div>
+          <p>Actions motivated by the desire to benefit others, regardless of consequences for oneself. Values benevolent acts as intrinsically praiseworthy.</p>
+        </div>
+        <div class="info-card applied">
+          <div class="info-label">Negative Consequentialism</div>
+          <p>Focus exclusively on minimising negative outcomes. Reject any notion that positive results justify harmful means.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPLIED ETHICS -->
+  <div id="applied-ethics" class="section">
+    <div class="section-label applied">Applied Ethics</div>
+    <div class="section-title">Bioethics, Business Ethics &amp; Environmental Ethics</div>
+    <p class="section-intro">Applied ethics is the application of moral norms and principles to specific controversial issues — determining the rightness of particular actions in particular contexts.</p>
+
+    <div class="subsection">
+      <h3>Bioethics (Biomedical Ethics) <span class="anchor-hash">#</span></h3>
+      <p>Bioethics studies ethical issues arising from advances in biology, technology, and medicine. Key issues include patient autonomy, distribution of medical resources, human experimentation, and life-and-death decisions.</p>
+
+      <h4>The Four + One Guiding Principles (Beauchamp &amp; Childress)</h4>
+      <ul class="principle-list">
+        <li><span class="num">1</span><span><strong>Autonomy:</strong> The patient's right to self-determination — to decide what happens to their own body.</span></li>
+        <li><span class="num">2</span><span><strong>Beneficence:</strong> The goal of promoting health and wellbeing.</span></li>
+        <li><span class="num">3</span><span><strong>Non-maleficence:</strong> First, do no harm (<em>primum non nocere</em>).</span></li>
+        <li><span class="num">4</span><span><strong>Justice:</strong> Fair distribution of healthcare resources and burdens.</span></li>
+        <li><span class="num">5</span><span><strong>Utility:</strong> Balancing benefit over harm for the wider population.</span></li>
+      </ul>
+
+      <div class="info-grid">
+        <div class="info-card applied">
+          <div class="info-label">Abortion</div>
+          <p>Key concepts: personhood and its criteria, potentiality, Aristotle's ensoulment, the right to bodily autonomy, and the sanctity of human life.</p>
+        </div>
+        <div class="info-card applied">
+          <div class="info-label">Euthanasia</div>
+          <p>Passive vs. active euthanasia, physician-assisted suicide, opportunity costs for loved ones, period of clinical equipoise, and the distinction between killing and letting die.</p>
+        </div>
+        <div class="info-card applied">
+          <div class="info-label">Human Augmentation</div>
+          <p>Gene editing, somatic cell interventions (changes cannot be inherited) vs. germ-line interventions (heritable changes), and the ethics of patenting genetic material.</p>
+        </div>
+        <div class="info-card applied">
+          <div class="info-label">Meaningful Work</div>
+          <p>Work freely chosen, that pays enough to satisfy basic needs, fosters independence, supports moral and rational development, and does not interfere with pursuit of happiness.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>Business Ethics <span class="anchor-hash">#</span></h3>
+      <p>Business ethics addresses corporate responsibility, the obligations of organisations to employees and communities, and the regulation of emerging technology.</p>
+      <div class="info-grid">
+        <div class="info-card meta">
+          <div class="info-label">CSR</div>
+          <p><strong>Corporate Social Responsibility:</strong> A business has ethical responsibilities toward the environment (environmental CSR) and to the communities it affects (community CSR, including respect for human rights).</p>
+        </div>
+        <div class="info-card virtue">
+          <div class="info-label">Whistleblowing</div>
+          <p>Calling attention to wrongdoing within an organisation. Raises conflicts between loyalty to employers and obligations to the public. Sweatshops are a paradigm case.</p>
+        </div>
+        <div class="info-card deonto">
+          <div class="info-label">Globalization</div>
+          <p>The shift toward an integrated world economy raises questions about offshore outsourcing, labour standards, monopoly power, and responsibility across supply chains.</p>
+        </div>
+        <div class="info-card util">
+          <div class="info-label">Code of Ethics</div>
+          <p>Outlines what actions are or are not permissible for an organisation. Corporate responsibility holds that the collective of individuals making up a corporation are responsible for wrongdoing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>Environmental Ethics <span class="anchor-hash">#</span></h3>
+      <p>Environmental ethics studies the moral relationship between human beings and the natural environment. It extends ethical concern beyond the human to the non-human world.</p>
+      <ul class="principle-list">
+        <li><span class="num">1</span><span>The Earth and its creatures have <strong>moral status</strong> and are worthy of ethical concern.</span></li>
+        <li><span class="num">2</span><span>The Earth and its creatures have <strong>intrinsic value</strong> — not merely instrumental value in serving human needs.</span></li>
+        <li><span class="num">3</span><span>Drawing from the concept of an <strong>ecosystem</strong>, humans should consider "wholes" that include other life forms and the environment — not just individual organisms.</span></li>
+      </ul>
+      <p>Stakeholders include not only present humans but <strong>future generations</strong> who may be affected by today's environmental decisions, and people far away affected via air and water — and, on some views, the natural world itself.</p>
+      <div class="callout synoptic">
+        Environmental ethics intersects with political philosophy (distributive justice across generations), with personhood (what entities deserve moral consideration), and with meta-ethics (does nature have intrinsic value, or only value because humans project it?).
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- OPTIONAL THEME 2: POLITICAL PHILOSOPHY            -->
+  <!-- ══════════════════════════════════════════════════ -->
+
+  <div id="polphil" class="theme-header">
+    <div class="theme-accent polphil"></div>
+    <div class="theme-header-content">
+      <div class="theme-tag polphil">Optional Theme 2</div>
+      <h2>Political Philosophy</h2>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-intro">Political philosophy asks the fundamental questions about political authority, the state, and justice. What is the state, and what justifies its power? Who should rule, and how? What place should liberty and equality have in a just society? How should wealth and property be distributed? These questions unite the work of Hobbes, Locke, Rousseau, Mill, Rawls, Nozick, and others.</p>
+  </div>
+
+  <!-- STATE OF NATURE -->
+  <div class="chapter-divider">
+    <div class="chapter-num">Section I</div>
+    <div class="chapter-line"></div>
+  </div>
+
+  <div id="state-of-nature" class="section">
+    <div class="section-label state">State of Nature</div>
+    <div class="section-title">Life Before Government</div>
+    <p class="section-intro">The <strong>state of nature</strong> is a thought experiment: what would life be like in the complete absence of government, law, and political authority? The question matters because it reveals what we need the state <em>for</em>, and what rights we bring to any social arrangement.</p>
+
+    <div class="thinker-card state">
+      <div class="thinker-meta">
+        <div class="thinker-name">Thomas Hobbes</div>
+        <div class="thinker-dates">1588–1679</div>
+        <span class="thinker-school school-contract">Social Contract</span>
+      </div>
+      <p>Hobbes's masterwork <em>Leviathan</em> (1651) begins with a materialist account of human nature: humans are fundamentally self-interested, driven by a ceaseless desire for power. Power is one's "present means to obtain some future apparent good."</p>
+      <p><strong>The State of War:</strong> In the absence of authority, competition, diffidence, and the desire for glory drive humans into perpetual conflict — either actual war or constant readiness to fight. Life in the state of nature is famously "solitary, poor, nasty, brutish, and short."</p>
+
+      <div class="phil-quote">
+        <p>"Do not do that to another which thou wouldst not have done to thy selfe."</p>
+        <span class="attribution">— Hobbes, <em>Leviathan</em> (the reduction of all 19 Laws of Nature to one)</span>
+      </div>
+
+      <p><strong>Laws of Nature:</strong> Hobbes identifies 19 laws of nature — conclusions of reason that express what is <em>collectively</em> rational (e.g., seek peace; give up rights if others do; keep promises). But in the state of nature, <em>individual rationality</em> prevails — the Prisoner's Dilemma shows that collectively rational positions are unstable, since individuals will defect.</p>
+      <p><strong>The Sovereign:</strong> To escape the state of nature, rational self-interested individuals agree to transfer their natural rights to a sovereign (the Leviathan), who enforces the laws of nature. Only under a sovereign can people securely follow the collectively rational path.</p>
+    </div>
+
+    <div class="thinker-card state">
+      <div class="thinker-meta">
+        <div class="thinker-name">John Locke</div>
+        <div class="thinker-dates">1632–1704</div>
+        <span class="thinker-school school-liberal">Liberal</span>
+      </div>
+      <p>Locke's <em>Second Treatise of Civil Government</em> appears to respond directly to Hobbes, though without naming him. Locke fundamentally rejects Hobbes's dark picture of human nature.</p>
+      <p><strong>Locke's State of Nature:</strong> A state of <em>perfect freedom</em> and equality — not a state of war. It is governed by a <em>Law of Nature</em> discoverable by reason: no one ought to harm another in their life, health, liberty, or possessions. We have a duty to preserve ourselves <em>and</em> others.</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Hobbes</th>
+            <th>Locke</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>State of Nature</strong></td>
+            <td>State of war — brutal &amp; violent</td>
+            <td>Generally liveable; bound by moral law</td>
+          </tr>
+          <tr>
+            <td><strong>Equality</strong></td>
+            <td>Factual (physical/mental capabilities)</td>
+            <td>Moral (no natural right to dominate another)</td>
+          </tr>
+          <tr>
+            <td><strong>Law of Nature</strong></td>
+            <td>Seek peace; otherwise, use war</td>
+            <td>Do not harm others in life, health, liberty, or property</td>
+          </tr>
+          <tr>
+            <td><strong>Natural Liberty</strong></td>
+            <td>Do whatever ensures one's survival</td>
+            <td>Do only what the moral law of nature permits</td>
+          </tr>
+          <tr>
+            <td><strong>Need a Sovereign?</strong></td>
+            <td>Absolute sovereign essential</td>
+            <td>Enforcer needed, but with limited powers</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Executive Power of the Law of Nature:</strong> Locke's surprising move — if everyone is equal, then everyone has the right and duty to enforce the Law of Nature. This transcends any particular human law. It also secures rights (including property rights) even without government.</p>
+    </div>
+
+    <div class="thinker-card state">
+      <div class="thinker-meta">
+        <div class="thinker-name">Jean-Jacques Rousseau</div>
+        <div class="thinker-dates">1712–1778</div>
+        <span class="thinker-school school-contract">Social Contract</span>
+      </div>
+      <p>Rousseau's <em>Discourse on the Origin of Inequality</em> offers a developmental account of the state of nature. The "natural human" is a solitary, peaceful, pre-rational animal driven by <em>amour de soi</em> (self-love) and <em>pitié</em> (compassion). Inequality and misery arise from the development of society, property, and the faculty of reason — not from human nature itself.</p>
+      <div class="callout synoptic">
+        Rousseau's state of nature connects directly to his theory of the General Will (Section III) — because he believes natural humans are good, a properly constituted state can recover something of that goodness through civic participation.
+      </div>
+    </div>
+  </div>
+
+  <!-- JUSTIFYING THE STATE -->
+  <div class="chapter-divider">
+    <div class="chapter-num">Section II</div>
+    <div class="chapter-line"></div>
+  </div>
+
+  <div id="justifying-state" class="section">
+    <div class="section-label state">Justifying the State</div>
+    <div class="section-title">What Gives the State the Right to Rule?</div>
+    <p class="section-intro">The state maintains a monopoly of legitimate coercion and offers to protect all within its territory. But what gives it the right? Several competing answers: utilitarian justification, social contract (consensual), and fair play.</p>
+
+    <div class="subsection">
+      <h3>Key Concepts <span class="anchor-hash">#</span></h3>
+      <div class="info-grid">
+        <div class="info-card state">
+          <div class="info-label">Universal Political Obligation</div>
+          <p>Every person within a state's borders must obey each law because it <em>is</em> the law — not because it is independently morally justified.</p>
+        </div>
+        <div class="info-card state">
+          <div class="info-label">Voluntarism</div>
+          <p>Political power over me can only be created by my voluntary acts. I must grant another person power over me and agree to be ruled by it — otherwise authority is illegitimate.</p>
+        </div>
+        <div class="info-card state">
+          <div class="info-label">Tacit Consent</div>
+          <p>Implied or silent consent (e.g., by remaining in a country). Hume objects: the conditions for genuine tacit consent are not met in the modern world — people have nowhere to go.</p>
+        </div>
+        <div class="info-card state">
+          <div class="info-label">Hypothetical Consent</div>
+          <p>The social contract is purely hypothetical — it tells us what we <em>would</em> have agreed to in the state of nature. Does a hypothetical contract actually bind us?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="thinker-card state">
+      <div class="thinker-meta">
+        <div class="thinker-name">Jeremy Bentham</div>
+        <div class="thinker-dates">1748–1832</div>
+        <span class="thinker-school school-util">Utilitarian</span>
+      </div>
+      <p><strong>Utilitarian Justification:</strong> The state is justified if (and only if) it produces more happiness than any alternative. Consent is irrelevant — utility is what matters. Laws should be passed and obeyed when they maximise happiness; repealed when they do not.</p>
+      <p>The premises of Bentham's argument: (1) The morally best society maximises happiness. (2) The state promotes happiness better than the state of nature. (3) The state and state of nature are the only alternatives. Conclusion: we have a moral duty to uphold the state.</p>
+      <div class="callout objection">
+        <strong>Scapegoat Objection:</strong> If punishing an innocent person as a scapegoat would increase overall happiness (e.g., by preventing riots), utilitarianism seems to endorse this — violating our deepest intuitions about justice and rights.
+      </div>
+    </div>
+
+    <div class="thinker-card state">
+      <div class="thinker-meta">
+        <div class="thinker-name">H. L. A. Hart</div>
+        <div class="thinker-dates">1907–1992</div>
+        <span class="thinker-school school-liberal">Principle of Fairness</span>
+      </div>
+      <p><strong>The Principle of Fairness:</strong> When a number of people cooperate for mutual benefit — each restricting their liberty to conform to rules — those who benefit have an obligation to do their part. It is unfair to reap the benefits of the state (security, infrastructure, law) while refusing to shoulder your share of the burdens (taxes, jury duty, law-abiding behaviour).</p>
+      <div class="callout objection">
+        Hume's objection applies: benefiting from a practice is not the same as consenting to it. I cannot be obligated merely by benefits I received without choosing to participate.
+      </div>
+    </div>
+  </div>
+
+  <!-- WHO SHOULD RULE? -->
+  <div class="chapter-divider">
+    <div class="chapter-num">Section III</div>
+    <div class="chapter-line"></div>
+  </div>
+
+  <div id="who-should-rule" class="section">
+    <div class="section-label polphil">Who Should Rule?</div>
+    <div class="section-title">Democracy, Guardianship &amp; the General Will</div>
+
+    <div class="subsection">
+      <h3>Democracy: What Is It? <span class="anchor-hash">#</span></h3>
+      <p>Democracy is government <em>of</em> the people (only those making up the electorate), <em>by</em> the people (collective self-rule), and <em>for</em> the people (in the interests of the governed). Two key issues: majority rule vs. consideration for the individual; and direct vs. representative democracy.</p>
+      <p>De Tocqueville warned of the <strong>"tyranny of the majority"</strong> — even in a democracy, the majority can oppress minorities. Mill pointed out the fallacy of treating "the people" as a homogenous mass with a single interest.</p>
+    </div>
+
+    <div class="thinker-card polphil">
+      <div class="thinker-meta">
+        <div class="thinker-name">Plato</div>
+        <div class="thinker-dates">427–347 BCE</div>
+        <span class="thinker-school school-virtue">Anti-Democracy</span>
+      </div>
+      <p><strong>The Craft Analogy:</strong> Just as we would not let passengers vote on how to navigate a ship — we want the expert navigator — we should not let the demos vote on how to govern the state. Ruling is a <em>skill</em>, and the unqualified should not exercise it.</p>
+      <p>Democracy is rule by the demos — the mob. The loudest voices (sophists) and those with the most conviction will sway the rest, leading to the rule of the vulgar and unfit. <strong>Philosophers should rule</strong> — they have genuine wisdom about the common good.</p>
+      <div class="callout objection">
+        (1) Training rulers doesn't automatically give them the right to control our lives. (2) Plato's assurance that philosopher-kings will be corruption-resistant is unpersuasive. (3) Philosophical expertise may not reveal what people actually want — only a vote can do that.
+      </div>
+    </div>
+
+    <div class="thinker-card polphil">
+      <div class="thinker-meta">
+        <div class="thinker-name">Rousseau</div>
+        <div class="thinker-dates">1712–1778</div>
+        <span class="thinker-school school-contract">General Will</span>
+      </div>
+      <p><strong>The General Will vs. the Will of All:</strong> Rousseau distinguishes between the <em>will of all</em> (the sum of every individual's particular interests) and the <em>general will</em> (the common good — what is morally correct for the whole community). The general will is what the sovereign (the people assembling to make laws) ought to express.</p>
+      <p>The general will must be <strong>general in both its object and its essence</strong> — applying to and affecting all citizens equally. It cannot be targeted at particular groups. We should be ruled by laws, not rulers.</p>
+      <p><strong>Elected Aristocracy:</strong> Rousseau argued for an elected executive to <em>apply</em> laws — but the power to <em>make</em> laws belongs to the sovereign people assembling directly. This distinguishes his view from Plato's: Rousseau's administrators cannot legislate.</p>
+      <div class="callout objection">
+        (1) Practically impossible to assemble everyone. (2) Does a general will even exist in a diverse society? (3) Those who dissent from the general will are "forced to be free" — a concept that can justify deeply repressive states. (4) Rousseau excludes women entirely from the sovereign.
+      </div>
+    </div>
+
+    <div class="thinker-card polphil">
+      <div class="thinker-meta">
+        <div class="thinker-name">Condorcet's Theorem</div>
+        <div class="thinker-dates">1743–1794</div>
+        <span class="thinker-school school-liberal">Pro-Democracy</span>
+      </div>
+      <p>If each voter has a better-than-even chance of being correct about the common good, and voters decide independently, then as the electorate grows, the <em>majority verdict</em> becomes increasingly likely to be correct. This provides a mathematical argument for democracy as a way of discovering the common good.</p>
+      <div class="callout objection">
+        Condorcet's theorem only works under two conditions: (1) The average voter must be better than 50% likely to be right — even Condorcet was pessimistic about this at large scale. (2) Voters must be motivated by the common good, not personal interest. Mixed motivations undermine both conditions.
+      </div>
+    </div>
+
+    <div class="thinker-card polphil">
+      <div class="thinker-meta">
+        <div class="thinker-name">John Stuart Mill</div>
+        <div class="thinker-dates">1806–1873</div>
+        <span class="thinker-school school-liberal">Representative Democracy</span>
+      </div>
+      <p>Mill argues for <strong>representative democracy</strong> — elected representatives who both make laws and carry them out. His criteria for effective government: (1) improving citizens morally and intellectually; (2) dealing with public affairs efficiently. Humans flourish only under conditions of independence — despotism produces passivity and discontent.</p>
+      <p>Mill's system includes elaborate safeguards: proportional representation for minorities; limits on campaign spending; plural voting weighted by education. He concedes representative democracy is not perfect — it can encourage unfit candidates and amounts to "elective dictatorship." But it allows us to answer "Why should this person rule?" in a way we can accept.</p>
+
+      <div class="callout exam-tip">
+        Examiners want you to notice that Mill's "representative democracy" ends up looking a lot more like Plato's guardianship than Mill admits — he defers heavily to expert representatives and restricts the influence of uneducated voters. Always trace this tension.
+      </div>
+    </div>
+  </div>
+
+  <!-- LIBERTY -->
+  <div class="chapter-divider">
+    <div class="chapter-num">Section IV</div>
+    <div class="chapter-line"></div>
+  </div>
+
+  <div id="liberty" class="section">
+    <div class="section-label liberty">The Place of Liberty</div>
+    <div class="section-title">Mill's Liberalism &amp; the Harm Principle</div>
+    <p class="section-intro">Mill's <em>On Liberty</em> (1859) proposes severe limits on the legitimate power of the state — aiming for a point between anarchy and Hobbesian total sovereignty. Complete freedom leads to exploitation; complete unfreedom leads to passivity and moral stagnation. The question is where to draw the line.</p>
+
+    <div class="thinker-card liberty">
+      <div class="thinker-meta">
+        <div class="thinker-name">Mill's Liberty (Harm) Principle</div>
+        <span class="thinker-school school-liberal">Liberalism</span>
+      </div>
+      <p><strong>The Liberty Principle:</strong> You may justifiably limit a person's freedom of action only if they threaten to harm another. All "self-regarding" actions (affecting only the agent) must be left entirely free; only "other-regarding" actions (affecting others) are subject to state interference.</p>
+      <p><strong>Freedom of Thought &amp; Discussion:</strong> We should have <em>complete</em> freedom of thought and discussion. Even false views must be heard — because (a) we cannot claim infallibility, (b) false views may contain partial truths, and (c) orthodoxy held without challenge atrophies into "dead dogma." There is never a case for censorship of ideas.</p>
+      <div class="callout objection">
+        Rousseau objects: developments in the arts and sciences have only caused more unhappiness and corrupted public morals. Ignorance may be bliss. Mill's response: the only way truth can emerge is through full and free discussion of all sides.
+      </div>
+
+      <h4>Defining "Harm"</h4>
+      <p>Mill uses "harm" to mean damage to interests — specifically, interests that deserve protection as <em>rights</em>. These include financial interests and interests in personal safety. But harm does not include being outcompeted in a profession or examination.</p>
+      <div class="callout objection">
+        There is no action that is entirely self-regarding — even personal choices affect others indirectly. Mill's distinction cannot be drawn as cleanly as he needs it to be.
+      </div>
+
+      <h4>Liberty, Rights, &amp; Utility</h4>
+      <p>Mill grounds rights not in abstract natural law ("nonsense on stilts," per Bentham) but in utility: to have a right is to have something society ought to defend in one's possession, grounded in general utility. The greatest happiness consists in giving people a protected private sphere of rights-based interests (no state intervention) and allowing a public sphere where utilitarian intervention is possible.</p>
+      <p><strong>Individuality &amp; Progress:</strong> Mill argues that liberty is the only unfailing source of moral and intellectual improvement. Individuals are best judges of their own happiness; removing liberty prevents people from developing the capacity for genuine choice; "experiments in living" allow successful ways of life to act as models for others.</p>
+    </div>
+
+    <div class="thinker-card liberty">
+      <div class="thinker-meta">
+        <div class="thinker-name">Lord Devlin</div>
+        <div class="thinker-dates">1905–1992</div>
+        <span class="thinker-school school-virtue">Legal Moralism</span>
+      </div>
+      <p>In response to the Wolfenden Report (1957), Devlin argued that society holds shared moral principles which it is justified in enforcing through criminal law — even for private acts between consenting adults (e.g., his era's treatment of homosexuality). Devlin's view holds that shared morality is the cement of society: its dissolution would destroy society itself.</p>
+      <p>Mill would deny that private acts damage shared morality in the relevant way, and would insist on the liberty principle to protect self-regarding conduct. The debate between Devlin and Mill represents the fundamental tension between liberty and communal moral order.</p>
+    </div>
+  </div>
+
+  <!-- DISTRIBUTIVE JUSTICE -->
+  <div class="chapter-divider">
+    <div class="chapter-num">Section V</div>
+    <div class="chapter-line"></div>
+  </div>
+
+  <div id="distributive-justice" class="section">
+    <div class="section-label distrib">Distributive Justice</div>
+    <div class="section-title">Property, Markets &amp; Justice</div>
+    <p class="section-intro">How should a just society distribute property, wealth, and opportunity? This question brings together questions about rights, liberty, and equality. The central positions are libertarianism (strong property rights, minimal state), welfare liberalism (redistribution to help the worst-off), and the socialist critique.</p>
+
+    <div class="thinker-card distrib">
+      <div class="thinker-meta">
+        <div class="thinker-name">John Locke — Property Rights</div>
+        <div class="thinker-dates">1632–1704</div>
+        <span class="thinker-school school-liberal">Liberal</span>
+      </div>
+      <p>Locke's <em>Second Treatise</em> offers four arguments for property acquisition through labour:</p>
+      <ul class="principle-list">
+        <li><span class="num">1</span><span><strong>Survival:</strong> God put people on Earth; we must be permitted to survive. Mankind must take what it needs — constrained by the "non-wastage proviso" (don't take more than needed) and the "enough and as good" proviso (leave sufficient for others).</span></li>
+        <li><span class="num">2</span><span><strong>Labour-Mixing:</strong> You own your labour. By labouring on an object, you "mix your labour" with it and come to own it. This justifies the appropriation of land.</span></li>
+        <li><span class="num">3</span><span><strong>Value-Added:</strong> Labour increases the value of land. The labourer is therefore entitled to the cultivated land (though critics ask: only to the added value?).</span></li>
+        <li><span class="num">4</span><span><strong>Industrious vs. Quarrelsome:</strong> The industrious person who works land has a better claim than a quarrelsome person who claims it out of laziness — provided sufficient land remains for others.</span></li>
+      </ul>
+      <div class="callout objection">
+        General problems: (1) If land is scarce, Locke's "enough and as good" proviso cannot be met — future generations are locked out. (2) Once land is appropriated, the liberty of non-owners is curtailed. Why should labour overturn the pre-existing liberty to use unowned land? (3) The labour-mixing argument: "If I own a can of tomato juice and spill it into the sea, do I thereby come to own the sea?" (Nozick)
+      </div>
+    </div>
+
+    <div class="thinker-card distrib">
+      <div class="thinker-meta">
+        <div class="thinker-name">Robert Nozick</div>
+        <div class="thinker-dates">1938–2002</div>
+        <span class="thinker-school school-libertarian">Libertarianism</span>
+      </div>
+      <p>Nozick's <em>Anarchy, State, and Utopia</em> (1974) defends an <strong>entitlement theory of justice</strong>. Distribution is just if and only if it results from a chain of just acquisitions and just transfers — regardless of what pattern the resulting distribution exhibits.</p>
+      <p><strong>Three Principles:</strong> (1) Justice in initial acquisition (Lockean labour-mixing). (2) Justice in transfer — voluntary exchanges between consenting parties. (3) Justice in rectification — correcting past injustices in acquisition or transfer.</p>
+      <p><strong>Against Patterned Theories:</strong> Any attempt to maintain a pattern (e.g., "to each according to need") will require constant interference with voluntary exchanges — violating liberty. As Wilt Chamberlain demonstrates: if all initial holdings are just, and individuals freely exchange, any resulting distribution is just even if unequal.</p>
+      <p><strong>The Minimal State:</strong> The state may not tax beyond what is required for the enforcement of rights (defense, police, courts). Redistributive taxation is a form of forced labour — taking the products of people's work without consent.</p>
+    </div>
+
+    <div class="thinker-card distrib">
+      <div class="thinker-meta">
+        <div class="thinker-name">John Rawls</div>
+        <div class="thinker-dates">1921–2002</div>
+        <span class="thinker-school school-social">Welfare Liberalism</span>
+      </div>
+      <p>Rawls's <em>A Theory of Justice</em> (1971) uses a hypothetical contract argument to derive principles of justice. The device: imagine choosing the principles of a just society from behind a <strong>Veil of Ignorance</strong> — without knowing your place in society, your class, your conception of the good, or your special psychological propensities. In this <strong>Original Position</strong>, you are <em>mutually disinterested</em> (not altruistic) and want to maximise your share of "primary goods."</p>
+
+      <h4>Rawls' Two Principles of Justice</h4>
+      <ul class="principle-list">
+        <li><span class="num">1</span><span><strong>Liberty Principle:</strong> Each person is to have an equal and extensive set of basic liberties compatible with a similar set for all.</span></li>
+        <li><span class="num">2</span><span><strong>Difference Principle:</strong> Social and economic inequalities are arranged to be (a) to the greatest benefit of the least advantaged, and (b) attached to positions open to all under conditions of fair equality of opportunity.</span></li>
+      </ul>
+      <p>The Difference Principle is key: inequalities are only permissible if they make the worst-off members of society better off than they would be under strict equality. Rawls advocates an egalitarian society constrained by fairness, not strict equality.</p>
+      <div class="callout objection">
+        (1) The contract is hypothetical — does it really bind us? (2) The "primary goods" and "thin theory of the good" may be culturally biased toward commercial, individualist societies. (3) It may be impossible to follow both the Liberty Principle and the Difference Principle simultaneously when they conflict.
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>End-State vs. Historical Theories of Justice <span class="anchor-hash">#</span></h3>
+      <div class="info-grid">
+        <div class="info-card distrib">
+          <div class="info-label">End-State Theory</div>
+          <p>You can tell if a situation is just by looking at its structure — e.g., Pen's Income Parade revealing income distribution. Justice is a property of outcomes, not of how they came about.</p>
+        </div>
+        <div class="info-card distrib">
+          <div class="info-label">Historical Theory (Nozick)</div>
+          <p>We need more information about <em>how</em> people got their resources. Justice depends on the history of acquisition and transfer, not on the current pattern of distribution.</p>
+        </div>
+        <div class="info-card distrib">
+          <div class="info-label">Patterned Historical</div>
+          <p>Distribution should be made according to a pattern: "to each according to his need/ability." Nozick argues this requires constant coercive redistribution, impeding liberty.</p>
+        </div>
+        <div class="info-card distrib">
+          <div class="info-label">Unpatterned Historical (Nozick)</div>
+          <p>Just distribution is a matter of each person acquiring goods through legitimate procedures (just acquisition, just transfer). Nozick's own theory is unpatterned.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOSSARY -->
+  <div class="chapter-divider">
+    <div class="chapter-num">Key Terms</div>
+    <div class="chapter-line"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-label ethics">Glossary</div>
+    <div class="section-title">Quick Reference — All Key Terms</div>
+
+    <dl class="glossary">
+      <div class="glossary-item">
+        <dt>Eudaimonia</dt>
+        <dd>Human flourishing — the state of having fulfilled one's potential and lived well (Aristotle).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Categorical Imperative</dt>
+        <dd>Kant's supreme moral principle — a command that applies to all rational beings unconditionally.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Greatest Happiness Principle</dt>
+        <dd>The morally right action produces the most happiness and least pain for the greatest number (Bentham/Mill).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Meta-Ethics</dt>
+        <dd>The study of the nature, status, and origins of moral claims — asking what moral language means and whether moral properties exist.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Moral Cognitivism</dt>
+        <dd>Moral statements are truth-apt — they can be objectively true or false.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Moral Non-Cognitivism</dt>
+        <dd>Moral statements express attitudes or prescriptions, not truth-apt beliefs (emotivism, prescriptivism).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Moral Realism</dt>
+        <dd>Moral properties exist independently of minds and can be located in the world.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Naturalistic Fallacy</dt>
+        <dd>The error of defining "good" in terms of natural properties (Moore).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Emotivism</dt>
+        <dd>Moral statements express emotions — they are "boos" or "hurrahs" (Ayer, Stevenson).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Prescriptivism</dt>
+        <dd>Moral statements express prescriptions for others to act in accordance with our moral judgments (Hare).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Moral Error Theory</dt>
+        <dd>Moral statements are truth-apt but always false, because no objective moral properties exist (Mackie).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Is-Ought Problem</dt>
+        <dd>Hume's observation that one cannot derive prescriptive "ought" claims from purely descriptive "is" claims.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Doctrine of the Golden Mean</dt>
+        <dd>Virtues are identified as the mean between two vices — deficiency and excess (Aristotle).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Phronesis</dt>
+        <dd>Practical wisdom — the capacity to identify the virtuous action in particular circumstances (Aristotle).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Primary Precepts</dt>
+        <dd>The foundational moral rules discoverable by reason in Aquinas's natural law framework.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Hedonic Calculus</dt>
+        <dd>Bentham's method for quantifying pleasure along seven dimensions: intensity, duration, certainty, propinquity, fecundity, purity, extent.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>State of Nature</dt>
+        <dd>A thought experiment: life without government or political authority.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Social Contract</dt>
+        <dd>The (actual or hypothetical) agreement by which individuals surrender some rights to a sovereign in exchange for protection.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>General Will</dt>
+        <dd>The common good — what is morally correct for the whole community, distinct from the sum of individual wills (Rousseau).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Liberty (Harm) Principle</dt>
+        <dd>Freedom may only be limited to prevent harm to others — not for the agent's own good or to enforce morality (Mill).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Veil of Ignorance</dt>
+        <dd>Rawls's device for fair reasoning: choose principles of justice without knowing your place in society.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Difference Principle</dt>
+        <dd>Inequalities are only justified if they benefit the worst-off members of society (Rawls).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Entitlement Theory</dt>
+        <dd>Justice in distribution depends on whether holdings were acquired through just procedures — not on the resulting pattern (Nozick).</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Tyranny of the Majority</dt>
+        <dd>De Tocqueville's warning that democratic majorities can oppress minorities as surely as any tyrant.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Tacit Consent</dt>
+        <dd>Implied consent — e.g., remaining in a country implies consent to its laws. Hume objects that this is too weak to ground genuine obligation.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>Bioethics</dt>
+        <dd>The study of ethical issues arising from advances in biology, technology, and medicine.</dd>
+      </div>
+      <div class="glossary-item">
+        <dt>CSR</dt>
+        <dd>Corporate Social Responsibility — a business's ethical obligations to the environment and communities it affects.</dd>
+      </div>
+    </dl>
+
+    <div class="callout synoptic" style="margin-top: 32px;">
+      <strong>Core Synoptic Links to Make:</strong><br><br>
+      <strong>Ethics → Political Philosophy:</strong> Normative theories directly shape political ones. Utilitarianism justifies the state by its consequences; Kantian deontology grounds rights-based liberalism; virtue ethics suggests civic education as central to good governance.<br><br>
+      <strong>Meta-Ethics → Normative Ethics:</strong> Whether moral properties are objective (realism) or merely expressive (non-cognitivism) determines what kind of normative theory is even possible.<br><br>
+      <strong>Distributive Justice → Liberty:</strong> Nozick's strong property rights and Mill's harm principle pull together against redistributive taxation; Rawls uses the Difference Principle to justify moderate redistribution.<br><br>
+      <strong>State of Nature → Social Contract → Democracy:</strong> Hobbes's war of all produces absolute sovereignty; Locke's reasonable natural law produces limited government; Rousseau's General Will produces direct participatory democracy — and all three connect to the question of who should rule.
+    </div>
+
+    <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);">
+      <div style="font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; color: var(--text-muted); margin-bottom: 8px;">"The unexamined life is not worth living."</div>
+      <div style="font-size: 12px; color: var(--text-dim);">— Socrates (Plato, <em>Apology</em>)</div>
+      <div style="margin-top: 20px; font-size: 13px; color: var(--text-dim);">Good luck. Philosophy rewards careful, patient thinking — take your time with each question, define your terms, and argue well.</div>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>
